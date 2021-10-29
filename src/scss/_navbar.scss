@@ -1,0 +1,186 @@
+// HEADER
+
+header { 
+    @include flex-element(row, center, center);
+    background: transparent;
+    height: 8.5rem;
+    margin-bottom: -8.5rem;
+    .container {
+      .dropdown-mob {
+        display: none;
+      }
+      @include responsive(1024px) {
+        .dropdown-mob {
+          display: flex;
+        }
+      }
+  
+      @include flex-element(row, space-between, center);
+      nav {
+        @include flex-element(row, space-between, center);
+        ul {
+          @include flex-element(row, center, center);
+          margin-right: 5rem;
+          li {
+            margin-right: 5rem;
+            a {
+              font-size: 1.4rem;
+              color: $white;
+              transition: all 0.3s;
+              &:hover {
+                color: $main-color;
+              }
+            }
+            &:last-child {
+              margin-right: 0rem;
+            }
+          }
+        }
+        @include responsive(1024px) {
+          display: none;
+        }
+        .categ-btn {
+          cursor: pointer;
+          position: relative;
+          @include flex-element(row, center, center);
+          color: #ccc;
+          .br {
+            margin-right: 1rem;
+          }
+          .invalid {
+            color: #aaa;
+          }
+          .sanduiche {
+            margin-right: 1.2rem;
+          }
+        }
+  
+        .dropdown:hover .dropdown-content {
+          @include flex-element(column, center, start);
+        }
+  
+        .dropdown-content {
+          display: none;
+          margin-left: -0.6rem;
+          border-radius: 6px;
+          background: #fff;
+          padding: 1rem 2rem;
+          position: absolute;
+  
+          -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
+  
+          z-index: 2020;
+  
+          .sep-bar {
+            width: 100%;
+            height: 1px;
+            background: #ddd;
+            margin-bottom: 1rem;
+          }
+  
+          a {
+            color: $dark;
+            margin-bottom: 1rem;
+            &:last-child {
+              margin-bottom: 0rem;
+            }
+            &:hover {
+              color: $main-color;
+            }
+          }
+        }
+      }
+  
+      .mobile-btn {
+        @include style-btn(
+          none,
+          4rem,
+          $main-color,
+          $second-color,
+          $white,
+          $white
+        );
+  
+        @include responsive(1024px) {
+          display: flex;
+        }
+      }
+  
+      .dropdown-mob:hover .dropdown-content-mob {
+        @include flex-element(column, center, start);
+      }
+  
+      .dropdown-content-mob {
+
+        display: none;
+        margin-top: 5rem;
+        margin-left: -10rem;
+        background: #fff;
+        padding: 3rem 5.5rem;
+        position: absolute;
+  
+        -webkit-box-shadow: 0px 3px 50px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 3px 50px 0px rgba(0, 0, 0, 0.25);
+  
+        z-index: 2020;
+  
+        .sep-bar {
+          width: 100%;
+          height: 2px;
+          background: #ddd;
+          margin-bottom: 2rem;
+        }
+  
+        a {
+          font-size: 1.8rem;
+          color: $dark;
+          margin-bottom: 1.5rem;
+          &:last-child {
+            margin-bottom: 0rem;
+          }
+          &:hover {
+            color: $main-color;
+          }
+        }
+
+
+        .categ-btn {
+          cursor: pointer;
+          position: relative;
+          @include flex-element(row, center, center);
+          color: $dark;
+          .br {
+            margin-right: 1rem;
+          }
+          .invalid {
+            color: #ccc;
+          }
+          .sanduiche {
+            margin-right: 1.2rem;
+          }
+        }
+      }
+
+      .logo {
+        display: block;
+      }
+      .logoMob {
+        display: none;
+      }
+
+      @include responsive(991px) {
+        .logo {
+          display: none;
+        }
+        .logoMob {
+          display: block;
+        }
+      }
+    }
+  }
+  .yellow-bar {
+    width: 100%;
+    height: 5px;
+    background-color: $main-color;
+  }

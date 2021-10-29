@@ -1,0 +1,42 @@
+.s-banner-image {
+    .container-fluid {
+
+        .container {
+            .title-featured {
+                font-size: 2.4rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                line-height: 29px;
+                letter-spacing: 9px;
+                text-align: center !important;
+                margin-bottom: 5rem;
+                color: #aaa;
+            }
+        }
+        padding: 16rem 0 4rem;
+      .banner {
+          width: 100%;
+        display: block;
+      }
+      .bannerMob {
+        display: none;
+      }
+
+      @include responsive(991px) {
+        .banner {
+          display: none;
+        }
+        .bannerMob {
+          width: 100%;
+          display: block;
+        }
+        .container {
+          .title-featured {
+              font-size: 1.6rem !important;
+              letter-spacing: 5px;
+              text-align: center !important;
+          }
+      }
+      }
+    }
+}

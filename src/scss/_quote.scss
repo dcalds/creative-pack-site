@@ -1,0 +1,58 @@
+.s-quote {
+    margin-top: 15rem;
+    margin-bottom: 10rem;
+    background-color: #303030;
+    .container-fluid {
+
+        .container {
+            @include flex-element(row, center, center);
+
+            .quote-box {
+                width: 100%;
+                max-width: 60rem;
+                .quote-badge { 
+                    color: $main-color;
+                    font-size: 1.2rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 1.7rem;
+                    letter-spacing: 0.6rem;
+                    text-align: left;
+                }
+                .quote {
+                    margin: 1.5rem 0 1.5rem;
+                    font-size: 4.2 rem;
+                    color: #ebebeb; 
+                    font-weight: 400;
+                    line-height: 55px;
+                    letter-spacing: -1px;
+                }
+                .quote-author {
+                    color: #ebebeb; 
+                    font-size: 1.2rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 1.7rem;
+                    letter-spacing: 0.2rem;
+                    text-align: left;
+                }
+            }
+
+            .quote-image {
+                .author-image {
+                }
+            }
+
+            @include responsive(991px) {
+                @include flex-element(column, center, center);
+                .quote-box {
+                    margin-top: 10rem ;
+                    margin-bottom: 6rem;
+                    .quote {
+                        line-height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

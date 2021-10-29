@@ -1,0 +1,137 @@
+// SELECTED PRODUCT
+
+.product {
+  width: 100%;
+  max-width: 110rem;
+
+  img {
+    max-width: 40rem;
+  }
+
+  @include flex-element(row, start, start);
+
+  @include responsive(950px) {
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+    @include flex-element(column, start, start);
+  }
+
+  .product-info {
+    padding-left: 6.4rem;
+    padding-bottom: 9rem;
+    width: 100%;
+
+    @include responsive(950px) {
+      padding: 1rem 0 4rem;
+    }
+
+    h2 {
+      text-align: start;
+      font-weight: 400;
+    }
+
+    .desc {
+      padding: 2rem 0 4rem;
+      @include flex-element(row, start, start);
+      .desc-item {
+        width: 100%;
+        max-width: 40rem;
+        span {
+          color: $dark;
+          font-size: 1.4rem;
+          font-weight: 700;
+          line-height: 2rem;
+          letter-spacing: 0em;
+        }
+        p {
+          color: $dark;
+          font-size: 1.8rem;
+          font-weight: 400;
+          line-height: 2.7rem;
+          letter-spacing: 0em;
+        }
+      }
+    }
+
+    @include responsive(950px) {
+      .desc {
+        padding: 0 0 1.5rem;
+        @include flex-element(column, start, start);
+        .desc-item {
+          &:first-child {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+
+    .price {
+      p {
+        color: $second-color;
+        font-size: 3.6rem;
+        span {
+          font-size: 4.8rem;
+          font-weight: 600;
+        }
+      }
+
+      @include flex-element(row, space-between, center);
+      .price-button {
+        @include style-btn(
+          flex,
+          5rem,
+          $main-color,
+          $second-color,
+          $white,
+          $white
+        );
+        margin-top: 1.5rem;
+        padding: 2.5rem 8rem !important;
+        .arrow {
+          margin-left: 1.3rem;
+        }
+      }
+    }
+
+    @include responsive(950px) {
+      .price {
+        @include flex-element(column, flex-start, start);
+        .price-button {
+          width: 100%;
+          padding: 2.5rem 0rem !important;
+          img {
+            max-width: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.style-bar {
+  width: 100%;
+  height: 1rem;
+  background: linear-gradient(180deg, #aed023 0%, #9cbf0b 100%);
+}
+
+.info {
+  width: 100%;
+  max-width: 110rem;
+
+  .title {
+    text-align: start;
+    font-weight: 400;
+  }
+
+  .separator-bar {
+    width: 100%;
+    height: 1px;
+    background: $dark;
+  }
+
+  .desc {
+    padding: 2rem 0 9rem;
+  }
+}

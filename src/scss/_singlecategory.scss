@@ -1,0 +1,35 @@
+.s-single-category {
+    margin-top: 7.5rem;
+    .container {
+        @include flex-element(column, center, center);
+
+        .title-box {
+            padding: 5rem 0 0rem;
+            @include flex-element(column, center, center);
+            h2 {
+                margin: 2rem 0 2rem;
+                span {
+                    font-size: 4.2rem;
+                    font-weight: 300;
+                }
+            }
+            .text-box {
+                text-align: center;
+                margin: 3rem 0 3rem;
+                color: #999;
+            }
+
+            .image-box-mob {
+                display: none;
+            }
+            @include responsive(991px) {
+                .image-box {
+                    display: none;
+                }
+                .image-box-mob {
+                    display: block;
+                }
+            }
+        }
+    }
+}

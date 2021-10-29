@@ -1,0 +1,83 @@
+// FEATURED
+
+.s-featured {
+  .container {
+    padding-top: 7.3rem;
+    @include flex-element(column, center, center);
+    
+    h2 {
+      margin: 1rem 0 2.4rem;
+    }
+      
+      .text-desc {
+        max-width: 70rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: $gray;
+        margin-bottom: 4.5rem
+      }
+      
+      .left-side {
+        @include flex-element(row, space-between, center);
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 98rem;
+      }
+      .right-side {
+        @include flex-element(row, space-between, center);
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 98rem;
+      }
+
+      .text-box {
+        max-width: 60rem;
+        .title-solution {
+          color: $main-dark-color;
+          font-size: 2.8rem;
+          font-style: normal;
+          font-weight: 400;
+          letter-spacing: -0.01em;
+          margin-bottom: 4.5rem;
+        }
+        .text-solution {
+          color: $gray;
+          font-size: 1.6rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 2.4rem;
+          letter-spacing: 0em;
+          margin-bottom: 2.5rem;
+        }
+      }
+
+      @include responsive(991px) {
+        
+        .left-side {
+          @include flex-element(column, center, center);
+          text-align: center;
+          margin-bottom: 3rem
+        }
+        .right-side {
+          @include flex-element(column-reverse, center, center);
+          text-align: center;
+          margin-bottom: 3rem
+        }
+
+        .image-solution {
+          width: 70%;
+        }
+      }
+    }
+  }
+  
+  .container-special {
+    padding-top: 5rem !important;
+    @include responsive(790px) {
+      padding-top: 3rem !important;
+    }
+  }
+  

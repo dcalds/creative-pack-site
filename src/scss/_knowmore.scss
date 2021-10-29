@@ -1,0 +1,126 @@
+// KNOW MORE
+
+.s-know-more{
+  .container {
+    margin-top: 7.5rem;
+    padding-top: 7.5rem;
+    @include flex-element(column, center, center);
+
+
+  .text-desc {
+    max-width: 80rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: $gray;
+    margin-bottom: 4.5rem
+  }
+
+    h2 {
+      margin: 1rem 0 2.4rem;
+    }
+    
+
+    .about-square {
+      margin-bottom: 5rem;
+      width: 100%;
+      max-width: 105rem;
+      @include flex-element(row, space-between, center);
+      
+
+      .workModel {
+        display: block;
+      }
+      .workModelMob {
+        display: none;
+      }
+
+      .feat-box {
+        @include flex-element(column, start, start);
+        .box { 
+          .title-feat {
+            font-weight: 300;
+          }
+          margin: 2rem 0 2rem;
+          @include flex-element(row, space-between, start);
+          .cta-main-button {
+            margin-top: 0rem;
+            @include style-btn(flex, 5.4rem, $main-color, $main-color, white, white );
+            width: 33.2rem;
+            .arrowRight {
+              margin-left: 2rem;
+            }
+          }
+        }
+        .box-text {
+          width: 100%;
+          max-width: 45rem;
+          h6 { 
+            font-size: 2.4rem; 
+            font-weight: 500;
+            line-height: 36px;
+            letter-spacing: -0.5px;
+          } 
+
+          margin-left: 2rem; 
+          font-size: 1.8rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 2.7rem;
+          letter-spacing: 0em;
+          color: $gray;
+        }
+
+        .title-feat {
+          margin: 0;
+        }
+
+        .title-text {
+          margin: 0;
+        }
+      }
+    }
+    
+    @include responsive(1250px) {
+      .about-square {
+        margin-bottom: 5rem;
+        width: 100%;
+        max-width: 115rem;
+      }
+    }
+    @include responsive(1250px) {
+      .about-square {
+        margin-bottom: 1rem;
+        .workModel {
+          display: none;
+        }
+        .workModelMob {
+          display: block;
+        }
+        @include flex-element(column, center, center);
+        .feat-box {
+          .box {
+            width: 100%;
+            .cta-main-button {
+              width: 100%;
+              
+            }
+          }
+          .box-text {
+            width: 100%;
+            max-width: 45rem;
+          }
+        }
+      }
+    }
+  }
+
+  .container-fluid {
+    padding-bottom: 5rem;
+    img {
+      width: 100%;
+    }
+  }
+}

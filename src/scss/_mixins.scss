@@ -1,0 +1,56 @@
+@mixin flex-element($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin responsive($screenWidth) {
+  @media (max-width: $screenWidth) {
+    @content;
+  }
+}
+
+@mixin style-btn($display, $height, $bg, $bgHover, $colorText, $colorTextHover) {
+  display: $display;
+  justify-content: center;
+  align-items: center;
+  height: $height;
+  background: $bg;
+  color: $colorText;
+  border-radius: 0;
+  padding: 0 3rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    opacity: 0.9;
+    background-color: $bgHover;
+    color: $colorTextHover;
+    transform: scale(1.03);
+  }
+}
+
+@mixin style-btn-outline($display, $height, $bg, $bgHover, $colorText, $colorTextHover) {
+  display: $display;
+  justify-content: center;
+  align-items: center;
+  height: $height;
+  background: transparent;
+  border: 1px solid $main-color;
+  color: $colorText;
+  border-radius: 0;
+  padding: 0 3rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    background-color: $bgHover;
+    color: $colorTextHover;
+    transform: scale(1.03);
+  }
+}
+
+@mixin gradient() {
+  background: linear-gradient(90.8deg, #16BCBF 0%, #FF6E8D 100%);
+}

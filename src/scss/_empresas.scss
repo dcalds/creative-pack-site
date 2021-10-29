@@ -1,0 +1,117 @@
+.s-empresas {
+    margin: 4rem 0 0;
+    background: url(https://i.ibb.co/Rb3MR9P/bgWolf.jpg) no-repeat;
+    background-position: top;
+    background-size: cover;
+    min-height: 80rem;
+    padding: 7rem 0 7rem;
+
+    .cta-squads {
+        @include flex-element(column, center, center);
+        margin-bottom: 6rem;
+    }
+    .title-box {
+        @include flex-element(row, center, center);
+        .title-box-left {
+            @include flex-element(column, center, start);
+            width: 100%;
+            .icon-lobo {
+                margin-bottom: 3rem;
+            }
+
+            .title-feat {
+                font-weight: 300;
+                margin: 0;
+                text-align: start;
+            }
+
+            .title-text {
+                text-align: start;
+                margin: 0;
+            }
+        }
+        .title-box-right {
+            width: 100%;
+            max-width: 35rem;
+            p {
+                margin-top: 1.8rem;
+                color: $gray;
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 2.1rem;
+                letter-spacing: -0.01em;
+            }
+        }
+    }
+
+    .content-box {
+        @include flex-element(row, space-between, start);
+        flex-wrap: wrap;
+        margin: 6rem 0 4rem;
+
+        .content-card {
+            min-height: 164px;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 38rem;
+            background-color: #fff;
+            text-align: center;
+            color: #fff;
+            padding: 0;
+
+            @include flex-element(column, center, center);
+        }
+    }
+
+    @include responsive(982px) {
+        .title-box {
+            @include flex-element(column, center, center);
+
+            .title-box-left {
+                width: 100%;
+                max-width: 55rem;
+                .badge {
+                    text-align: center;
+                }
+                h2 {
+                    margin: 1.4rem 0 2.8rem;
+                    text-align: center;
+                }
+            }
+            .title-box-right {
+                width: 100%;
+                max-width: 35rem;
+                @include flex-element(column, center, center);
+                .line {
+                    margin-top: 1rem;
+                }
+                p {
+                    margin-top: 1.8rem;
+                    color: $gray;
+                    font-size: 1.6rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 2.1rem;
+                    letter-spacing: -0.01em;
+                    text-align: center;
+                }
+            }
+        }
+        .content-box {
+            width: 100%;
+            @include flex-element(column, center, center);
+            .content-card { 
+                max-width: 68rem; 
+            }
+        }
+    }
+    .cta-main-button {
+        margin-top: 0rem;
+        @include style-btn(flex, 5.4rem, $main-color, $main-color, $main-dark-color, $main-dark-color);
+        width: 33.2rem;
+        .arrowRight {
+            margin-left: 2rem;
+        }
+    }
+}

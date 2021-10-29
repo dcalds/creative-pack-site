@@ -1,0 +1,11 @@
+.s-content {
+    .container-fluid {
+        
+        @include flex-element(column, center, center);
+        height: 50vh;
+
+        h4 {
+            color: $main-color;
+        }
+    }
+}

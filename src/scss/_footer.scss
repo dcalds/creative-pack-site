@@ -1,0 +1,111 @@
+// FOOTER
+
+footer {
+    background: $main-dark-color;
+    .container {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      @include flex-element(column, center, center);
+      .top {
+        width: 100%;
+        @include flex-element(row, space-between, flex-start);
+        .left-top {
+          width: 250px;
+          .address {
+            color: #bbb;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+          }
+          p {
+            color: #bbb;
+            margin-top: 0.5rem;
+          }
+          @include responsive(500px) {
+            width: 100%;
+          }
+        }
+        .right-top {
+          width: 77.7rem;
+          @include responsive(1060px) {
+            width: 64rem;
+          }
+          @include responsive(900px) {
+            width: 57rem;
+          }
+          @include responsive(900px) {
+            width: 53rem;
+          }
+          @include responsive(580px) {
+            width: 100%;
+          }
+          @include flex-element(row, space-between, flex-start);
+          h6 {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: #fff;
+          }
+          li {
+            margin-top: 1.4rem;
+            a {
+              color: #bbb;
+              transition: ease 0.3s;
+              &:hover {
+                color: $main-color;
+              }
+            }
+          }
+          .footer-nav-top:last-child {
+            li {
+              margin-top: 2rem;
+              a {
+                @include flex-element(row, flex-start, center);
+                img {
+                  margin-right: 1.4rem;
+                }
+              }
+            }
+          }
+        }
+  
+        @include responsive(1060px) {
+          @include flex-element(column, flex-start, center);
+          .right-top {
+            margin-top: 3rem;
+          }
+        }
+  
+        @include responsive(560px) {
+          .right-top {
+            margin-top: 0;
+            flex-wrap: wrap;
+            @include flex-element(row, space-between, flex-start);
+            .footer-nav-top {
+              margin-top: 4rem;
+              width: 50%;
+              &:last-child {
+                width: 90%;
+                ul {
+                  @include flex-element(row, space-between, center);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .end {
+    padding: 2rem 2.4rem;
+    background: $light-color;
+    text-align: center;
+    p {
+      color: $main-dark-color;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 19px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+  }
+  

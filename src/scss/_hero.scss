@@ -1,0 +1,168 @@
+// HERO
+
+.s-hero {
+    .container-web { 
+      height: 80rem;
+      .clickabeBanner {  
+        .gradient-bar {
+          @include gradient();
+          height: 5px;
+          width: 120px;
+          margin: 4rem 0 2rem;
+        }
+        @include flex-element(column, center, start);
+        width: 100%;
+        height: 100%; 
+        .welcome { 
+          font-weight: 300;
+          font-size: 1.4rem;
+          letter-spacing: 0.5rem;
+          color: $white;
+          margin-bottom: 3.2rem;
+        }
+        .title-feat {
+          font-weight: 300;
+          color: $white;
+        }
+        .title-main {
+          color: $white;
+        }
+        .cta-main-button {
+          margin-top: 4rem;
+          @include style-btn(flex, 5.4rem, $main-color, $main-color, $white, $white);
+          width: 33.2rem;
+          .arrowRight {
+            margin: 2rem;
+          }
+        }
+        .cta-main-button-alt {
+          margin: 4rem 0 0rem;
+          @include flex-element(row, start, center);
+
+          span {
+            margin-left: 2rem;
+            color: white;
+          }
+        }
+        
+        .hero-icons {
+          @include flex-element(row, start, start);
+          margin-top: 3rem;
+
+          .hero-icon {
+            color: $white;
+            font-size: 1.8rem;
+            @include flex-element(row, start, start);
+            img {
+              margin-right: 2rem;
+            }
+          }
+        }
+      }
+      @include responsive(1440px) {
+        height: 70rem;
+      }
+      @include responsive(1380px) {
+        height: 70rem;
+      }
+      @include responsive(991px) {
+        display: none;
+      }
+    }
+    .container-mob {
+      display: none;
+      .clickabeBanner {
+        .gradient-bar {
+          @include gradient();
+          height: 5px;
+          width: 120px;
+          margin: 4rem 0 2rem;
+        }
+        @include flex-element(column, center, center);
+        
+        width: 100%;
+        height: 100%; 
+        .welcome {  
+          font-weight: 300;
+          font-size: 1.4rem;
+          letter-spacing: 0.5rem;
+          color: $white;
+          margin-bottom: 2rem;
+          text-align: center;
+        }
+        .title-feat {
+          font-weight: 300; 
+          color: $white;
+          font-size: 4.2rem;
+          text-align: center;
+        }
+        .title-main {
+          color: $white;
+          font-weight: 700; 
+          text-align: center;
+          font-size: 4.2rem;  
+        }
+        .hero-icons {
+          .hero-icon {
+            text-align: center;
+          }
+        }
+        .cta-main-button {
+          margin-top: 4rem;
+          @include style-btn(flex, 5.4rem, $main-color, $main-color, white, white );
+          width: 33.2rem;
+          .arrowRight {
+            margin-left: 2rem;
+          }
+        }
+        .cta-main-button-alt {
+          margin: 4rem 0 0rem;
+          @include flex-element(row, start, center);
+
+          span {
+            margin-left: 2rem;
+            color: white;
+          }
+        }
+        
+        .hero-icons {
+          @include flex-element(column, center, start);
+          margin-top: 1rem;
+
+          .hero-icon { 
+            margin-top: 2rem;
+            color: $white;
+            font-size: 1.8rem;  
+            @include flex-element(row, center, center);
+            img {
+              margin-right: 2rem;
+            }
+          }
+        }
+
+
+
+
+      }
+      @include responsive(991px) {
+        @include flex-element(column, center, center);
+        min-height: 70rem;
+      }
+      @include responsive(600px) {
+        @include flex-element(column, center, center);
+        min-height: 80rem;
+      }
+    }
+  }
+  
+  .s-banner .container-fluid {
+    height: 15rem;
+    @include flex-element(column, center, center);
+    h1 {
+      color: $white;
+      text-align: center;
+    }
+    @include responsive(1440px) {
+      height: 15rem;
+    }
+  }

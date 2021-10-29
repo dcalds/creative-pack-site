@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+ul {
+  padding-left: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+}
+
+@media (max-width: 1250px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+h2 {
+  text-align: center;
+}

@@ -1,0 +1,345 @@
+.s-BannerImage {
+  background: url(https://i.ibb.co/n0GdydV/bgWolf2.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include flex-element(column, center, center);
+
+  .container {
+    padding: 7rem 0 7rem;
+    .box {
+      @include flex-element(column, center, center);
+      h2 {
+        font-size: 4.8rem;
+        color: #f1f1f1;
+      }
+      p {
+        font-size: 2.4rem;
+        margin-top: 1rem;
+        color: #999;
+      }
+    }
+  }
+}
+
+.box1 {
+  @include flex-element(column, center, center);
+
+  .page-title {
+    width: 100%;
+    max-width: 932px;
+    font-size: 3.5rem;
+    margin: 7rem 0 7rem;
+    text-align: center;
+    color: #333;
+    span {
+      font-weight: 700;
+      font-size: 4.2rem;
+      margin: 7rem 0 7rem;
+      text-align: center;
+      color: #333;
+    }
+  }
+
+  .icons-row {
+    margin: 0 0 7rem;
+    width: 100%;
+    max-width: 1000px;
+    @include flex-element(row, space-between, center);
+    flex-wrap: wrap;
+
+    .icon {
+      width: 100%;
+      max-width: 280px;
+      @include flex-element(column, center, center);
+      p {
+        font-size: 2.2rem;
+        margin: 2rem 0 2rem;
+        text-align: center;
+      }
+    }
+  }
+
+  @include responsive(892px) {
+    .icons-row {
+      margin: 0 0 7rem;
+      width: 100%;
+      max-width: 1000px;
+      @include flex-element(column, center, center);
+      flex-wrap: wrap;
+
+      .icon {
+        width: 100%;
+        max-width: 280px;
+        @include flex-element(column, center, center);
+        p {
+          font-size: 2.2rem;
+          margin: 2rem 0 2rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .button {
+    margin: 0 0 6rem;
+    @include style-btn(flex, 5.4rem, $main-color, $main-color, $white, $white);
+    width: 100%;
+    max-width: 46rem;
+    .arrowRight {
+      margin: 2rem -2rem 2rem 2rem;
+    }
+  }
+}
+
+.container-fluid2 {
+  margin: 4rem 0 4rem;
+  background: linear-gradient(94.96deg, #303030 0%, #4d4d4d 100%);
+  padding: 7rem 0 7rem;
+  @include flex-element(column, center, center);
+
+  .quote {
+    padding: 0 2rem 0;
+    color: #f1f1f1;
+    margin: 2rem 0 2rem;
+    width: 100%;
+    max-width: 710px;
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 53px;
+    letter-spacing: -1px;
+    text-align: center;
+    span {
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 53px;
+      letter-spacing: -1px;
+      text-align: center;
+    }
+  }
+}
+
+.main-box {
+  margin: 10rem 0 0;
+  @include flex-element(row, space-between, center);
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 121.6rem;
+  .box {
+    margin: 0 0 6rem;
+    width: 100%;
+    max-width: 55rem;
+    .title-box {
+      margin: 1rem 0 2rem;
+      width: 100%;
+      max-width: 350px;
+      font-size: 4.2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 55px;
+      letter-spacing: -1px;
+      text-align: left;
+    }
+    .title-box-contato {
+      margin: 1rem 0 4rem;
+      width: 100%;
+      max-width: 400px;
+      font-size: 4.2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 55px;
+      letter-spacing: -1px;
+      text-align: left;
+    }
+    .text-desc-contato {
+      margin-top: 5rem !important;
+      width: 100%;
+      max-width: 50rem;
+      text-align: start;
+      color: #999;
+    }
+    .btn-contato {
+      @include flex-element(row, start, center);
+      margin: 1rem 0 2rem;
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 21px;
+      letter-spacing: 0px;
+      color: #288284;
+      .greenArrow {
+        margin-left: 1rem;
+        transition: 0.2s ease;
+      }
+    }
+    &:hover .greenArrow {
+      margin-left: 1.5rem;
+    }
+  }
+  .box2 {
+    @include flex-element(column, center, center);
+    gap: 32px;
+    flex-wrap: wrap;
+    margin: 0 0 6rem;
+    width: 100%;
+    .title-box {
+      margin: 1rem 0 2rem;
+      width: 100%; 
+      font-size: 4.2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 55px;
+      letter-spacing: -1px;
+      text-align: left;
+    }
+    .imgBig {
+      width: 100%;
+      max-width: 55rem;
+    }
+    .imgSmall {
+      display: none;
+    }
+
+    @include responsive(992px) {
+      .imgSmall {
+        width: 100%;
+        display: block;
+        max-width: 45rem;
+        margin-bottom: 4rem;
+      }
+      .imgBig {
+        display: none;
+      }
+      @include flex-element(column, center, center);
+    }
+  }
+}
+
+@include responsive(892px) {
+  .main-box {
+    margin: 10rem 0 0;
+    @include flex-element(column, center, center);
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 121.6rem;
+    .box {
+      margin: 0 0 6rem;
+      width: 100%;
+      max-width: 55rem;
+      .title-box {
+        margin: 1rem 0 2rem;
+        width: 100%;
+        max-width: 350px;
+        font-size: 4.2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 55px;
+        letter-spacing: -1px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.gradient-bar {
+  margin: 0 4rem 0;
+  @include gradient();
+}
+
+.text-desc {
+  width: 100%;
+  max-width: 90rem;
+  text-align: center;
+  color: #999;
+  margin: 0 0 5rem;
+}
+
+.text-desc2 {
+  width: 100%;
+  max-width: 60rem;
+  text-align: start;
+  color: #999;
+  margin: 0 0 5rem;
+}
+
+.text-desc22 {
+  font-size: 2.2rem;
+}
+
+.journey-icon {
+  margin-bottom: 3rem;
+}
+
+.mentores {
+  margin-bottom: 8rem;
+  width: 100%;
+  max-width: 121.6rem;
+  @include flex-element(row, space-between, center);
+  .Mentor {
+    width: 100%;
+    max-width: 38rem;
+  }
+}
+
+.db-container {
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  .item {
+    @include flex-element(column, center, center);
+    margin-top: 10rem;
+    .title {
+      color: #191919;
+      font-size: 4.2rem;
+      font-weight: 700;
+      margin: 2rem 0 2rem;
+    }
+    .desc {
+      color: #aaa;
+      font-size: 2.2rem;
+      text-align: center;
+
+
+      width: 100%;
+      max-width: 78rem;
+    }
+    .icon {
+    }
+    .button {
+      margin: 6rem 0 0rem !important;
+      @include style-btn-outline(flex, 5.4rem, transparent, $main-color, $main-color, $white);
+      width: 100%;
+      max-width: 46rem;
+      .arrowRight {
+        margin: 2rem -2rem 2rem 2rem;
+      }
+    }
+    .down {
+      margin-top: 8rem;
+    }
+  }
+}
+
+@include responsive(1000px) {
+  .mentores {
+    margin-bottom: 8rem;
+    width: 100%;
+    @include flex-element(row, space-between, center);
+    max-width: 80rem;
+    .Mentor {
+      width: 100%;
+      max-width: 24rem;
+    }
+  }
+}
+
+@include responsive(650px) {
+  .mentores {
+    margin-bottom: 8rem;
+    width: 100%;
+    @include flex-element(column, center, center);
+    .Mentor {
+      max-width: 34rem;
+      margin-bottom: 4rem;
+    }
+  }
+}

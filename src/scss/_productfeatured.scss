@@ -1,0 +1,162 @@
+.s-product-featured {
+
+    padding: 7rem 0 7rem;
+    .cta-squads {
+        @include flex-element(column, center, center);
+        margin-bottom: 6rem;
+    }
+    .title-box {
+        @include flex-element(row, center, center);
+        .title-box-left {
+            @include flex-element(column, center, center);
+            width: 100%;
+            .icon-lobo {
+                margin-bottom: 3rem;
+            }
+
+            .title-feat {
+                font-weight: 300;
+                margin: 0;
+                text-align: center;
+            }
+
+            .title-text {
+                text-align: center;
+                margin: 0;
+            }
+        }
+        .title-box-right {
+            width: 100%;
+            max-width: 35rem;
+            p {
+                margin-top: 1.8rem;
+                color: $gray;
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 2.1rem;
+                letter-spacing: -0.01em;
+            }
+        }
+    }
+
+    .content-box {
+        @include flex-element(row, space-between, start);
+        margin: 6rem 0 4rem;
+
+        .content-card {
+            min-height: 510px;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 38rem;
+            background-color: #303030;
+            text-align: center;
+            color: #fff;
+            padding: 5rem 4rem;
+
+            @include flex-element(column, center, center);
+
+            h6 {
+                font-size: 2.2rem;
+                margin: 2rem 0 2rem;
+            }
+
+            p {
+                color: #bbb;
+            }
+
+            a {
+                @include flex-element(row, center, center);
+                color: white;
+                margin-top: 2rem;
+                cursor: pointer;
+                transition: 0.2s ease;
+            }
+
+            a:hover {
+                color: $main-color;
+            }
+        }
+    }
+    .centerContainer {
+        @include flex-element(column, center, center);
+    }
+    .webImg {
+    }
+    .mobImg {
+        display: none;
+    }
+    .mobButton {
+        margin: 6rem 0 0rem !important;
+        @include style-btn(flex, 5.4rem, $main-color, $main-color, $white, $white);
+        width: 100%;
+        max-width: 46rem;
+        .arrowRight {
+            margin: 2rem -2rem 2rem 2rem;
+        }
+    }
+
+    @include responsive(1000px) {
+        .webImg {
+            display: none;
+        }
+        .mobImg {
+            text-align: center;
+            display: block;
+        }
+
+        .title-box {
+            @include flex-element(column, center, center);
+
+            .title-box-left {
+                width: 100%;
+                max-width: 55rem;
+                .badge {
+                    text-align: center;
+                }
+                h2 {
+                    margin: 1.4rem 0 2.8rem;
+                    text-align: center;
+                }
+            }
+            .title-box-right {
+                width: 100%;
+                max-width: 35rem;
+                @include flex-element(column, center, center);
+                .line {
+                    margin-top: 1rem;
+                }
+                p {
+                    margin-top: 1.8rem;
+                    color: $gray;
+                    font-size: 1.6rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 2.1rem;
+                    letter-spacing: -0.01em;
+                    text-align: center;
+                }
+            }
+        }
+        .content-box {
+            @include flex-element(column, center, center);
+        }
+    }
+    .cta-main-button {
+        margin-top: 0rem;
+        @include style-btn(flex, 5.4rem, $main-color, $main-color, $main-dark-color, $main-dark-color);
+        width: 33.2rem;
+        .arrowRight {
+            margin-left: 2rem;
+        }
+    }
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.w-550 {
+    width: 100%;
+    max-width: 550px;
+}

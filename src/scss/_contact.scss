@@ -1,0 +1,78 @@
+.s-contact {
+    padding: 5rem 0 5rem;
+    .container {
+        
+        @include flex-element(row, center, center);
+
+        .card-contact {
+            border-radius: 8px;
+            background: $main-color;
+            width: 100%;
+            max-width: 90rem;
+            padding: 6rem 6rem 6rem;
+            @include flex-element(row, space-between, center);
+
+            .text-title {
+                width: 100%;
+                max-width: 40rem;
+                p {
+                    text-align: start;
+                }
+                h2 {
+                    color: white;
+                    text-align: start;
+                }
+            }
+
+            .button-box {
+                width: 100%;
+                max-width: 32rem;
+                p {
+                    color: $white;
+                }
+                .text-bolder {
+                    font-weight: 600;
+                }
+                .button {
+                    @include style-btn(flex, 5.4rem, $main-dark-color, $second-color, $white, $main-dark-color );
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        @include responsive(800px) {
+            .card-contact {
+                @include flex-element(column, center, center);
+                .text-title {
+                    width: 100%;
+                    max-width: 40rem;
+                    p {
+                        text-align: center;
+                    }
+                    h2 {
+                        color: white;
+                        text-align: center;
+                        margin-bottom: 2rem;
+                    }
+                }
+                .button-box {
+                    @include flex-element(column, center, center);
+                    width: 100%;
+                    max-width: 32rem;
+                    p {
+                        text-align: center;
+                        color: $white;
+                    }
+                    .text-bolder {
+                        text-align: center;
+                        font-weight: 600;
+                    }
+                    .button {
+                        @include style-btn(flex, 5.4rem, $main-dark-color, $second-color, $white, $main-dark-color );
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

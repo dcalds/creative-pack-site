@@ -1,0 +1,92 @@
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: -1px;
+}
+
+h1 {
+  font-size: 5.2rem;
+  font-weight: 700;
+}
+
+h2 {
+  text-align: left;
+  color: $main-dark-color;
+  font-size: 4.2rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+.badge {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0.2em;
+  text-align: center;
+
+  color: $main-color;
+  padding: 0.2rem 0rem;
+  border-radius: 6px;
+}
+
+.wolf-feat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .wolficon {
+    margin-top: -3rem;
+  }
+}
+
+.contato-box {
+  .divider-line {
+    margin: 6rem 0 6rem;
+    background: #dddddd;
+    width: 100%;
+    height: 2px;
+  }
+
+  .box {
+    background: url(https://i.ibb.co/n0GdydV/bgWolf2.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include flex-element(column, center, center);
+
+    .decorator {
+      width: 72px;
+      height: 5px;
+      background: #c94661;
+      margin-top: 6.2rem;
+    }
+
+    h2 {
+      width: 100%;
+      margin-top: 3rem;
+      max-width: 660px;
+      text-align: center;
+      color: white !important;
+      font-weight: 300;
+      span {
+        font-size: 4.2rem;
+        font-weight: 700;
+        line-height: 125%;
+      }
+    }
+
+    .button {
+      margin: 4rem 0 6rem;
+      @include style-btn(flex, 5.4rem, $main-color, $main-color, $white, $white);
+      width: 33.2rem;
+      .arrowRight {
+        margin: 2rem;
+      }
+    }
+  }
+}

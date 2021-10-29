@@ -1,0 +1,126 @@
+.s-advantages {
+    margin-top: 5rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+
+    // background: linear-gradient(95.85deg, #339966 1.36%, #006D37 101.13%);
+    background: url(https://i.ibb.co/RbGM8kt/rfBg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .container {
+        
+        @include flex-element(row, space-between, start);
+
+        .left-box {
+            width: 100%;
+            max-width: 38rem;
+            .badge {
+                text-align: start;
+                color: $main-dark-color;
+                margin-bottom: 1.4rem;
+            }
+            h2 {
+                text-align: start;
+                color: $white; 
+            }
+            .text {
+                margin-top: 4.2rem;
+                margin-bottom: 4.2rem;
+                color: $white;
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 2.6rem;
+                letter-spacing: -0.01em;
+                text-align: left;
+            }
+        }
+
+        .right-box {
+
+            width: 100%;
+            max-width: 72rem;
+            @include flex-element(row, space-between, start);
+
+            @include responsive(1024px) {
+                max-width: 64rem;
+            }
+
+            flex-wrap: wrap;
+            .box {
+                width: 100%;
+                max-width: 30%;
+                .desc-text {
+                    margin-top: 2rem;
+                    margin-bottom: 4rem;
+                    color: $white;
+                    font-size: 2rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 3rem;
+                    letter-spacing: -0.01em;                    
+                }
+            }
+
+        }
+        @include responsive(991px) {
+            @include flex-element(column, center, center);
+    
+            .left-box {
+                .badge {
+                    text-align: center;
+                }
+                h2 {
+                    text-align: center;
+                }
+                .text {
+                    text-align: center;
+                }
+            }
+
+            .right-box {
+
+                width: 100%;
+                max-width: 90rem;
+                @include flex-element(row, center, center);
+
+                .box {
+                    max-width: 27%;
+                    @include flex-element(column, center, center);
+                    text-align: center;
+                }
+            }
+        }
+
+        @include responsive(701px) {
+            
+            .right-box {
+
+                width: 90%;
+                @include flex-element(row, space-between, start);
+                
+                .box {
+                    max-width: 45%;
+                    @include flex-element(column, center, center);
+                    text-align: center;
+                    .desc-text {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+            .box-button {
+                width: 100%;
+                max-width: 40rem;
+                .box-button-item {
+                    margin-top: 2rem;                
+                    @include style-btn(flex, 5.4rem, $main-dark-color, $main-color, $white, $white )
+                }
+            }
+
+}

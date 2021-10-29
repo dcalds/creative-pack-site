@@ -1,0 +1,60 @@
+// BONUS
+
+.s-bonus {
+    min-height: 15.8rem;
+    background: $light-color;
+    @include flex-element(row, space-between, center);
+    .container {
+      flex-wrap: wrap;
+      @include flex-element(row, space-between, center);
+      .bonus-box {
+        width: 100%;
+        max-width: 18%;
+        @include flex-element(row, space-between, center);
+        img {
+          margin-right: 2rem;
+        }
+        p {
+          font-size: 1.4rem;
+          font-weight: 600;
+          color: $dark;
+        }
+      }
+      @include responsive(991px) {
+        .bonus-box {
+          @include flex-element(column, center, center);
+          .icon {
+            margin: 0;
+          }
+          .text {
+            margin-top: 1rem;
+            text-align: center;
+          }
+        }
+      }
+      @include responsive(740px) {
+        .bonus-box {
+          @include flex-element(column, center, center);
+          max-width: 50%;
+          .icon {
+            margin: 4rem 0 0rem;
+          }
+        }
+      }
+      @include responsive(572px) {
+        .bonus-box {
+          @include flex-element(column, center, center);
+          max-width: 45%;
+        }
+      }
+    }
+  
+    @include responsive(740px) {
+      .container {
+        margin: 0 0 4rem;
+        .sep {
+          display: none;
+        }
+      }
+    }
+  }
