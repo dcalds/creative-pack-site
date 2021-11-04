@@ -3,6 +3,7 @@ import { DataContext } from "../../data/pageData";
 
 import logoWhite from "../../img/logoWhite.png";
 import insta from "../../img/insta.svg";
+import linkedin from "../../img/linkedin.svg";
 
 export default function Footer() {
 
@@ -56,6 +57,10 @@ export default function Footer() {
                     <a href="https://www.instagram.com/creativepackbr/">
                       <img alt="Seta" src={insta}></img>
                       <span> Instagram </span>
+                    </a>
+                    <a href="https://www.linkedin.com/company/creativepackbr/">
+                      <img alt="Seta" src={linkedin}></img>
+                      <span> Linkedin </span>
                     </a>
                   </li>
                   {/* 
